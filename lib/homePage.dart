@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void evaluate(String text){
+
     Parser p = Parser();
     Expression exp = p.parse(_expression);
     ContextModel cm = ContextModel();
