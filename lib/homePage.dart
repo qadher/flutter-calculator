@@ -1,6 +1,7 @@
 import 'package:calculator/calculatorButton.dart';
 import 'package:calculator/calculatorIconButton.dart';
 import 'package:calculator/custom_icon_icons.dart';
+import 'package:calculator/equalToButton.dart';
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 
@@ -72,6 +73,8 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(12),
               child: Text(
                 _expression,
+                //TODO
+                //maxLines: 1,
                 style: TextStyle(
                   fontFamily: 'Rubik',
                   fontSize: 48,
@@ -121,10 +124,10 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                CalculatorIconButton(buttonIcon: Icon(Icons.add), callback: numClick, text: '00',),
+                normalButton(buttonText: '00', callback: numClick),
                 normalButton(buttonText: '0', callback: numClick),
                 normalButton(buttonText: '.', callback: numClick),
-                equalToButton(buttonText: '=', callback: evaluate),
+                EqualToButton(callback: evaluate)
               ],
             ),
           ],
@@ -145,16 +148,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget equalToButton({required String buttonText, required Function callback}) {
-    return Container(
-      child: CalculatorButton(
-        text: buttonText,
-        textColor: Colors.white,
-        fillColor: Colors.deepOrangeAccent, callback: callback,
-
-      ),
-    );
-
-  }
 }
 

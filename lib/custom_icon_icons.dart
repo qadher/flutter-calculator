@@ -38,4 +38,5 @@ class CustomIcon {
   static const IconData percent = IconData(0xf295, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData divide = IconData(0xf529, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData equals = IconData(0xf52c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
 }
